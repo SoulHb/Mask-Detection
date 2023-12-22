@@ -2,7 +2,11 @@
 
 ### Overview
 This documentation provides information about the Mask Detection project, including the data used, the methods and ideas employed, and the metrics achieved. It also includes usage instructions and author information.
+#### Example for images:
+![results](./metrics/image_1.jpg)
 
+#### Example for video:
+![results](./metrics/video.gif)
 
 ### Data
 The dataset used for training and scoring is loaded with pytorch and consists images of people with mask, without mask and incorrect worn mask.
