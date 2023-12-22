@@ -1,21 +1,15 @@
-version: "3.11.3"
+FROM nvidia/cuda:12.3.1-devel-ubuntu20.04
 
-services:
-  streamlit-app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    environment:
-      - DOCKER_MODE=1
-    ports:
-      - "8501:8501"
-    command: ["streamlit", "run", "--server.port", "8501", "ui.py"]
-    depends_on:
-      - api
+RUN apt-get update
 
-  api:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    command: ["python3", "inference.py"]
-    
+# Install Python 3.8
+RUN apt-get install -y \
+    python3.10 \
+    python3.10-dev \
+    python3-pip
+# Copy  and install other requirements
+ARG DEBIAN_FRONTEND=noninteractive
+WORKDIR /app
+COPY . .
+RUN pip3 install -r ./requirements.txt
+RUN apt-get update && apt-get install -y libgl1-mesa-glx

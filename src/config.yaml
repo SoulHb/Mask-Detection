@@ -1,0 +1,8 @@
+epochs: 100
+batch_size: 2
+model_name: 'yolov8n.pt'
+model_url: 'https://drive.google.com/uc?export=download&id=1fQcHk4c9tble6Sn5k9-qtHNWxzqnnFmv'
+image_height: 640
+image_width: 640
+data_path: './data'
+saved_model_path: './saved_model'

@@ -1,0 +1,5 @@
+Flask
+streamlit
+ultralytics==8.0.135
+scikit-learn
+gdown
