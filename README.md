@@ -39,7 +39,7 @@ git clone https://github.com/SoulHb/Mask Detection.git
 ```
 Move to project folder
 ```bash
-cd Mask Detection
+cd Mask-Detection
 ```
 Install dependencies
 ```bash
@@ -84,13 +84,10 @@ Open streamlit ui in browser
 streamlit run ui.py
 ```
 ### With docker:
-Move to src folder
-```bash
-cd Mask Detection
-```
+
 Run docker-compose
  ```bash
-docker-compose -f docker_compose.yml up
+docker-compose -f docker-compose.yml up 
 ```
 
 ## Author
