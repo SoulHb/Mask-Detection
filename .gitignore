@@ -2,3 +2,4 @@ src/runs
 src/data
 src/yolov8n.pt
 src/saved_model
+.idea
